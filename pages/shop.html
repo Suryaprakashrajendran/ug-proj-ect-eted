@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .product img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <div class="logo">MyApp</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="shop-link"><a href="shop.html">Shop</a></li>
+            </ul>
+            <div class="burger" aria-label="Toggle navigation" role="button" tabindex="0">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop">
+            <h1>Shop</h1>
+            <p>Welcome to the Shop page. Here you can browse and purchase our products. We offer a variety of high-quality products designed to meet your needs.</p>
+            
+            <div class="products">
+                <div class="product" data-id="1" data-name="Mr.Bean" data-price="199.99">
+                    <img src="../images/two.jpg" alt="Mr.Bean">
+                    <h2>Mr.Bean</h2>
+                    <p>$199.99</p>
+                    <button class="add-to-cart" aria-label="Add Mr.Bean to cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="2" data-name="Benten" data-price="299.99">
+                    <img src="../images/three.jpg" alt="Benten">
+                    <h2>Benten</h2>
+                    <p>$299.99</p>
+                    <button class="add-to-cart" aria-label="Add Benten to cart">Add to Cart</button>
+                </div>
+                <div class="product" data-id="3" data-name="Heisenberg" data-price="399.99">
+                    <img src="../images/four.jpg" alt="Heisenberg">
+                    <h2>Heisenberg</h2>
+                    <p>$399.99</p>
+                    <button class="add-to-cart" aria-label="Add Heisenberg to cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+            </div>
+            <button id="buy-now" class="hidden">Buy Now</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MyApp. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
